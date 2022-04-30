@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using cursoDesenvolvedorIo01.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace cursoDesenvolvedorIo01.ViewComponents
 {
@@ -8,6 +9,17 @@ namespace cursoDesenvolvedorIo01.ViewComponents
         public IActionResult Adicionar()
         {
             return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult Adicionar(Filme filme)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(filme);
         }
     }
 }
